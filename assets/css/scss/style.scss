@@ -1,0 +1,1496 @@
+@import './reset';
+@import './base';
+
+.osechi_fadeOut {
+    opacity: 0;
+}
+.osechi_fadeIn {
+    animation: fadeIn 3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.osechi_slideOut {
+    opacity: 0;
+}
+.osechi_slideIn {
+    animation: slideIn 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+  }
+  40%,100% {
+    opacity: 1;
+  }
+}
+
+body {
+    overflow-x: hidden;
+
+    .osechi_pc {
+        display: none;
+    }
+
+    /*
+    .header {
+        // display: none;
+        width: 100%;
+        height: 97.5px;
+        background-color: $white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+    */
+
+    header {
+
+        .postage {
+            padding: 0 0 0 0;
+
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .osechi_fv {
+        background-image: url(https://gigaplus.makeshop.jp/kitanoace/01_osechi/assets/img/fv_bgImg1.jpg);
+        padding-bottom: 75px;
+        font-family: "Noto Serif JP", serif;
+        position: relative;
+
+        .osechi_fv_bgImg {
+            width: 100%;
+            @include absolute;
+        }
+
+        .osechi_fv_frex1 {
+           width: 100%;
+           padding-top: 45px;
+           display: flex;
+           justify-content: center;
+
+            .osechi_osechi1_img {
+                width: 50vw;
+                height: 50vw;
+                margin-top: 70px;
+                z-index: 0;
+
+                img {
+                    box-shadow: 10px 10px 20px $black_a;
+                }
+            }
+
+            .osechi_fv_title {
+                margin-left: 20px;
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                z-index: 0;
+
+                .osechi_fv_title_span {
+                    writing-mode: vertical-rl;
+                    @include font_lll;
+                    font-weight: 600;
+                    color: $white;
+                }
+
+                div {
+                    margin-right: 5px;
+
+                    p:nth-of-type(1) {
+                        writing-mode: vertical-rl;
+                        font-size: 49px;
+                        font-weight: 600;
+                        letter-spacing: 10px;
+                        line-height: 49px;
+                        color: $white;
+                    }
+
+                    p:nth-of-type(2) {
+                        margin-top: 2.5px;
+                        @include font_ll;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .osechi_fv_frex2 {
+            width: 100%;
+            margin-top: 5px;
+            display: flex;
+            justify-content: center;
+ 
+            .osechi_sale_icon {
+                width: 35vw;
+                margin: 50px 20px 0 0;
+                z-index: 0;
+
+                img {
+                    height: auto;
+                }
+            }
+
+            .osechi_osechi2_img {
+                width: 42.5vw;
+                height: 42.5vw;
+                z-index: 0;
+
+                img {
+                    width: 100%;
+                    box-shadow: 10px 10px 20px $black_a;
+                }
+            }
+        }
+
+        .osechi_fv_fixed {
+            width: calc(100vw - 50px);
+            border: solid 1px $gold;
+            background-color: $white;
+            padding: 22.5px 0;
+            margin: 150px auto 0 auto;
+            @include center;
+            flex-direction: column;
+            position: relative;
+            z-index: 0;
+
+            p:nth-of-type(1), p:nth-of-type(2) {
+                margin-bottom: 17.5px;
+                @include font_ll;
+                font-weight: bold;
+                color: #444444;
+
+                span {
+                    font-size: 35px;
+                    line-height: 35px;
+                }
+            }
+
+            p:nth-of-type(3) {
+                width: 75%;
+                @include font_s;
+                color: $gold;
+                line-height: 15px;
+            }
+        }
+
+        .osechi_ribbon_icon {
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateY(65%);
+        }
+    }
+
+    .osechi_fv_pc {
+        display: none;
+    }
+}
+
+.osechi_main {
+    // background-image: url(../img/bgImg.jpg);
+    background-image: url(https://gigaplus.makeshop.jp/kitanoace/01_osechi/assets/img/bgImg.jpg);
+    @include bg;
+    padding-bottom: 100px;
+
+    .osechi_about {
+        padding-top: 100px;
+
+        h2 {
+            @include h2;
+        }
+
+        ul {
+            width: 75%;
+            margin: 50px auto 0 auto;
+            @include center;
+
+            li {
+                width: calc(33.3% - 3.3px);
+                height: 32.5px;
+                margin: 0 5px;
+                @include center;
+                position: relative;
+
+                img {
+                    @include absolute;
+                    z-index: 0;    
+                }
+
+                p {
+                    font-weight: 600;
+                    color: $gold;
+                    text-align: center;
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .osechi_about_contents {
+            width: calc(100vw - 100px);
+            background-color: $white;
+            padding: 25px 25px 65px 25px;
+            margin: 35px auto 0 auto;
+
+            h3 {
+                @include font_ll;
+                letter-spacing: .7px;
+                line-height: 30px;
+                text-align: center;
+            
+                img {
+                    display: block;
+                    width: 50px;
+                    height: auto;
+                    margin: 0 auto 5px auto;
+                }
+            }
+
+            .osechi_about_contents_contents {
+                margin-top: 25px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                p {
+                    margin-top: 50px;
+                    color: $gold;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .osechi_detail {
+        padding-top: 100px;
+        margin-top: 100px;
+        // background-image: url(../img/detail_bgImg1.png);
+        background-image: url(https://gigaplus.makeshop.jp/kitanoace/01_osechi/assets/img/detail_bgImg1.png);
+        background-size: cover;
+        background-position: top center;
+        position: relative;
+        
+
+        h2 {
+            @include h2;
+            color: $white;
+        }
+
+        .osechi_ju {
+            overflow-x: hidden;
+            width: 100%;
+            padding-bottom: 75px;
+
+            .osechi_ju_h3 {
+                width: 75px;
+                height: 150px;
+                margin: 100px auto 0 auto;
+                @include center;
+                position: relative;
+
+                img {
+                    @include absolute;
+                    object-fit: initial;
+                }
+
+                h3 {
+                    writing-mode: vertical-rl;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: $white;
+                    line-height: 24px;
+                }
+            }
+
+            .osechi_ju_img {
+                width: 225px;
+                height: 225px;
+                margin: 25px auto 0 auto;
+                position: relative;
+
+                .osechi_osechi1 {
+                    box-shadow: 10px 10px 20px $black_a;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .osechi_treat1 {
+                    width: 300px;
+                    height: 300px;
+                    @include absolute;
+                    transform: translateX(-35%);
+                    z-index: 0;
+
+                    .osechi_treat1_img {
+                        width: auto;
+                        height: 100%;
+                    }
+
+                    .osechi_treat2_img {
+                        width: auto;
+                        height: 50%;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        transform: translateY(25%);
+                        z-index: -1;
+                    }
+                }
+
+                .osechi_ju_menu_treat1 {
+                    width: 300px;
+                    height: 300px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    transform: translate(60%, -30%);
+                    z-index: 0;
+
+                    .osechi_ju_menu_treat1_img {
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .osechi_ju_contents {
+                width: calc(100vw - 100px);
+                height: 75vh;
+                padding: 65px 25px 65px 25px;
+                margin: 35px auto 0 auto;
+                position: relative;
+                z-index: 1;
+                
+                .detail_contents_bg {
+                    width: 100%;
+                    height: auto;
+                    @include absolute;
+                    z-index: 0;
+                }
+
+                h3 {
+                    @include font_ll;
+                    letter-spacing: .7px;
+                    text-align: center;
+                    position: relative;
+                    z-index: 1;
+                
+                    img {
+                        display: block;
+                        width: 50px;
+                        height: auto;
+                        margin: 10px auto 0 auto;
+                    }
+                }
+
+                ul {
+                    width: 100%;
+                    position: relative;
+                    z-index: 0;
+
+                    li {
+                        margin-top: 35px;
+                        display: flex;
+
+                        img {
+                            width: 40%;
+                            height: auto;
+                        }
+
+                        div {
+                            width: 60%;
+                            margin-left: 5%;
+                            
+                            h4 {
+                                padding-top: 5px;
+                                @include center;
+                                @include font_l;
+                                font-weight: 400;
+                                color: $white;
+                                position: relative;
+
+                                img {
+                                    width: 100%;
+                                    height: auto;
+                                    @include absolute;
+                                    z-index: -1;
+                                }
+                            }
+
+                            p {
+                                margin: 25px auto 0 auto;
+                                font-size: 12px;
+
+                                .osechi_link {
+                                    color: $gold;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .osechi_ju_menu_h3 { 
+                margin-top: 100px;
+                @include font_ll;
+                color: $white;
+                letter-spacing: .7px;
+                text-align: center;
+            }
+
+            .osechi_ju_menu_table {
+                width: calc(100vw - 50px);
+                border-top: solid 1px $white;
+                border-bottom: solid 1px $white;
+                padding: 12.5px 0;
+                margin: 50px auto 0 auto;
+
+                table {
+
+                    tr {
+    
+                        td {
+                            padding: 3.5px 0;
+                            color: $white;
+                        }
+                    }
+                }    
+            }
+        }
+
+        .osechi_ninoju {
+            width: 100%;
+            // background-image: url(../img/detail_bgImg2.png);
+            background-image: url(https://gigaplus.makeshop.jp/kitanoace/01_osechi/assets/img/detail_bgImg2.png);
+            background-size: cover;
+            background-position: top center;
+            position: relative;
+
+            .osechi_detail_bgImg {
+                width: 100%;
+                height: 75px;
+                @include absolute;
+                transform: translateY(-75%);
+            }
+
+            .osechi_ju_h3 {
+
+                h3 {
+                    color: $black;
+                }
+            }   
+            
+            .osechi_ju_img {
+
+                .osechi_treat3 {
+                    width: 300px;
+                    height: 300px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    transform: translate(60%, 15%);
+                    z-index: 0;
+
+                    .osechi_treat3_img {
+                        width: auto;
+                        height: 100%;
+                    }
+
+                    .osechi_treat4_img {
+                        width: auto;
+                        height: 65%;
+                        position: absolute;
+                        bottom: 0;
+                        right: 5%;
+                        transform: translateY(15%);
+                        z-index: -1;
+                    }
+                }
+            }
+
+            .osechi_ju_contents {
+                padding: 50px 25px 65px 25px;
+
+                ul {
+
+                    li {
+
+                        .osechi_ju_contents_li_img {
+                            height: 40%;
+                        }
+                    }
+                }
+            }
+
+            .osechi_ju_menu_h3 {
+                color: $black;
+            }
+
+            .osechi_ju_img {
+
+                .osechi_ju_menu_treat1 {
+                    transform: translate(-35%, -25%);
+                    z-index: 0;
+                }
+            }
+
+            .osechi_ju_menu_table {
+                border-top: solid 1px $black;
+                border-bottom: solid 1px $black;
+
+                table {
+
+                    tr {
+
+                        td {
+                            color: $black;
+                        }
+                    }
+                }
+            }
+
+            .osechi_cta {
+                @include cta;
+                margin-top: 75px;
+            }
+        }
+
+        .osechi_info {
+            width: 100%;
+            // background-image: url(../img/info_bgImg.jpg);
+            background-image: url(https://gigaplus.makeshop.jp/kitanoace/01_osechi/assets/img/info_bgImg.jpg);
+            padding: 75px 0;
+            position: relative;
+
+            .osechi_ribbon_icon {
+                width: 100%;
+                @include absolute;
+                transform: translateY(-7px);
+                z-index: 1;
+    
+                img {
+                    height: auto;
+                }
+            }    
+
+            .osechi_info_deliver {
+                width: calc(100vw - 100px);
+                border: solid 1px $gold;
+                background-color: $white;
+                padding: 25px 25px;
+                margin: 0 auto;
+
+                h3 {
+                    @include font_l;
+                    color: $gold;
+                    text-align: center;
+
+                    span {
+                        display: block;
+                        width: 28px;
+                        margin: 0 auto 10px auto;
+                    }
+                }
+
+                .osechi_info_deliver_img {
+                    width: 100%;
+                    height: 175px;
+                    background-color: $grey;
+                    margin: 25px 0 12.5px 0;
+                }
+
+                h4 {
+                    margin-top: 12.5px;
+                    font-weight: 40;
+                }
+
+                ul {
+
+                    li {
+                        margin-top: 2.5px;
+                    }
+                }
+            }
+
+            .osechi_info_enjoy {
+                width: calc(100vw - 100px);
+                border: solid 1px $gold;
+                background-color: $white;
+                padding: 25px 25px;
+                margin: 50px auto 0 auto;
+
+                h3 {
+                    @include font_l;
+                    color: $gold;
+                    text-align: center;
+
+                    span {
+                        display: block;
+                        width: 28px;
+                        margin: 0 auto 10px auto;
+                    }
+                }
+
+                p {
+                    margin-top: 25px;
+                    @include font_l;
+                }
+
+                ul {
+                    margin-top: 25px;
+
+                    li {
+                        margin-top: 10px;
+                        @include font_s;
+                        letter-spacing: 1.2px;
+                        line-height: 15px;
+                        color: $gold;
+                    }
+                }
+            }
+        }
+    }
+
+    .osechi_service {
+        // background-image: url(../img/service_bgImg.svg);
+        background-image: url(https://gigaplus.makeshop.jp/kitanoace/01_osechi/assets/img/service_bgImg.svg);
+        padding: 100px 0 75px 0;
+
+        h2 {
+            @include h2;
+            color: $white;
+        }
+
+        article {
+            width: calc(100vw - 50px);
+            background-color: $white;
+            padding: 25px 0;
+            margin: 75px auto 0 auto;
+
+            h3 {
+                @include font_ll;
+                color: $red;
+                text-align: center;
+
+                span {
+                    display: block;
+                    width: 42px;
+                    margin: 0 auto 5px auto;
+                }
+            }
+
+            p {
+                margin-top: 25px;
+                @include font_l;
+                color: $gold;
+                line-height: 21.875px;
+                text-align: center;
+            }
+        }
+
+        article:nth-of-type(2) {
+            margin: 50px auto 0 auto;
+        } 
+    }
+
+    .osechi_qa {
+        padding-top: 100px;
+        
+        h2 {
+            @include h2;
+        }
+
+        ul {
+            width: calc(100vw - 100px);
+            padding: 0 25px;
+            margin: 75px auto 0 auto;
+            background-color: $white;
+
+            li {
+                padding: 17.5px 0;
+                border-bottom: solid 1px $gold;
+
+                table {
+
+                    tr:nth-of-type(1) {
+
+                        td {
+                            @include font_l;
+                            color: $gold;
+                            letter-spacing: .8px;
+                            line-height: 21.875px;
+                        }
+                    }
+
+                    tr:nth-of-type(2) {
+
+                        td {
+                            padding-top: 5px;
+                            letter-spacing: .7px;
+                            line-height: 17.5px;
+                        }
+                    }
+                }
+            }
+
+            li:nth-of-type(9) {
+                border-bottom: solid 1px transparent;
+            }
+        }
+
+        .osechi_cta {
+            margin-top: 100px;
+            @include cta;
+        }
+    }
+}
+
+
+/* pc↓↓↓ */
+
+@media screen and (min-width: 768px) {
+
+    * {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @mixin font_l_pc {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    @mixin font_ll_pc {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+    
+    @mixin font_lll_pc {
+        font-size: 32px;
+        line-height: 32px;
+    }    
+
+    @mixin h2_pc {
+        @include font_lll_pc;
+        color: $gold;
+        letter-spacing: 1px;
+        line-height: 35px;
+        text-align: center;
+    
+        img {
+            display: block;
+            width: 40px;
+            height: auto;
+            margin: 0 auto 5px auto;
+        }
+    
+        span {
+            display: block;
+            margin-top: 7.5px;
+            font-size: 16px;
+            color: $grey;
+            letter-spacing: 0;
+            line-height: 16px;
+        }
+    }
+
+    @mixin cta_pc {
+        width: 900px;
+        margin: 0 auto;
+
+        p {
+            width: fit-content;
+            margin: 0 auto;
+            font-weight: 600;
+            color: $red;
+            position: relative;
+    
+            &::before, &::after {
+                content: '';
+                width: 1px;
+                height: 14px;
+                background-color: $red;
+                position: absolute;
+                bottom: 0;
+            }
+    
+            &::before {
+                left: 0;
+                transform: translate(-7px, -2.5px) rotate(-15deg);
+            }
+    
+            &::after {
+                right: 0;
+                transform: translate(7px, -2.5px) rotate(15deg);
+            }
+        }
+    
+        .osechi_cta_button {
+            width: 100%;
+            border-radius: 40px;
+            // background-image: url(../img/cta_bg.svg);
+            background-image: url(https://gigaplus.makeshop.jp/kitanoace/01_osechi/assets/img/cta_bg.svg);
+            box-shadow: 3px 3px 0px $gold;
+            padding: 40px 0;
+            margin: 12.5px auto 0 auto;
+            position: relative;
+        
+            &::before {
+                content: '';
+            }
+        
+            a {
+                width: 99%;
+                height: 89%;
+                border: solid 1px $white;
+                border-radius: 40px;
+                @include center;
+                @include font_l_pc;
+                color: $white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }    
+        }    
+    }    
+
+    .osechi_sp {
+        display: none;
+    }
+
+    body {
+        margin: 0;
+
+        .osechi_pc {
+            display: block;
+        }    
+
+        /*
+        .header {
+            display: block;
+            width: 100vw;
+            height: 147.5px;
+            background-color: $white;
+            // position: fixed;
+            // top: 0;
+            // left: 0;
+        }
+        */
+
+        header {
+
+            .postage {
+    
+                p {
+                    font-size: 16px;
+                }
+            }
+        }    
+    
+        .osechi_fv {
+            display: none;
+        }
+
+        .header_back {
+            width: 100vw;
+            height: 90px;
+        }
+
+        .osechi_fv_pc {
+            display: block;
+            // background-image: url(../img/responsive/fv_bgImg1.jpg);
+            background-image: url(https://gigaplus.makeshop.jp/kitanoace/01_osechi/assets/img/responsive/fv_bgImg1.jpg);
+            padding-bottom: 75px;
+            font-family: "Noto Serif JP", serif;
+            position: relative;
+
+            .osechi_fv_flex {
+                width: 100vw;
+                height: 65vh;
+                // background-image: url(../img/responsive/fv_bgImg2_re.jpg);
+                background-image: url(https://gigaplus.makeshop.jp/kitanoace/01_osechi/assets/img/responsive/fv_bgImg2_re.jpg);
+                background-size: cover;
+                background-position: center bottom;
+                padding: 125px 0 0 0;
+                display: flex;
+                justify-content: center;
+                position: relative;
+                z-index: 0;
+
+                .osechi_sale_icon {
+                    width: 200px;
+                    height: 200px;
+                    margin-top: 225px;
+                }
+
+                .osechi_osechi1 {
+                    width: 45vh;
+                    height: 45vh;
+                    margin: 25px 0 0 25px;
+                }
+
+                .osechi_osechi2 {
+                    width: 35vh;
+                    height: 35vh;
+                    margin: 150px 0 0 25px;
+                }
+
+                .osechi_fv-title {
+                    margin-left: 60px;
+                    display: flex;
+                    flex-direction: row-reverse;
+
+                    .osechi_fv_title_span {
+                        writing-mode: vertical-rl;
+                        @include font_lll;
+                        font-weight: 600;
+                        color: $white;
+                    }
+
+                    div {
+                        margin-right: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        transform: translateY(15%);
+
+                        p:nth-of-type(1) {
+                            writing-mode: vertical-rl;
+                            font-size: 60px;
+                            font-weight: 600;
+                            letter-spacing: 10px;
+                            line-height: 60px;
+                            color: $white;
+                        }
+
+                        p:nth-of-type(2) {
+                            margin-top: 5px;
+                            @include font_ll_pc;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+
+            .osechi_fv_fixed {
+                width: 900px;
+                border: solid 1px $gold;
+                background-color: $white;    
+                padding: 50px 0;
+                margin: 100px auto 0 auto;
+                @include center;
+                flex-direction: column;
+                position: relative;
+                z-index: 0;
+                transform: translateY(-15%);
+
+                p:nth-of-type(1), p:nth-of-type(2) {
+                    margin-bottom: 25px;
+                    @include font_ll_pc;
+                    font-weight: bold;
+                    color: #444444;
+    
+                    span {
+                        font-size: 45px;
+                        line-height: 45px;
+                    }
+                }
+
+                p:nth-of-type(3) {
+                    width: auto;
+                    font-size: 16px;
+                    color: $gold;
+                    line-height: 16px;
+                    text-align: center;
+                }
+            }
+
+            .osechi_ribbon_icon {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform: translateY(70%);
+            }
+        }
+
+        .osechi_main {
+            overflow-x: hidden;
+            background-color: #F0EEE7;
+            // background-image: url(../img/responsive/main_bgImg.jpg);
+            background-image: url(https://gigaplus.makeshop.jp/kitanoace/01_osechi/assets/img/responsive/main_bgImg.jpg);
+            @include bg;            
+            padding-bottom: 0;
+
+            .osechi_about {
+                padding-top: 150px;
+                padding-bottom: 150px;
+
+                h2 {
+                    @include h2_pc;
+                }
+
+                ul {
+                    width: 20%;
+
+                    li {
+                        height: 30px;
+                    }
+                }
+
+                .osechi_about_contents {
+                    width: 1000px;
+                    padding: 35px 25px 45px 25px;
+
+                    h3 {
+                        @include font_ll_pc;
+
+                        img {
+                            width: 75px;
+                            margin: 0 auto 12.5px auto;
+                        }
+                    }
+
+                    .osechi_about_contents_contents {
+                        @include center;
+        
+                        img {
+                            width: 50%;
+                            height: auto;
+                        }
+        
+                        p {
+                            margin-top: 0;
+                            margin-left: 25px;
+                            color: $gold;
+                            letter-spacing: 1.6px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            .osechi_detail {
+                padding-top: 150px;
+                margin-top: 0;
+                // background: url(../img/responsive/detail_bgImg1_re.png);
+                background: url(https://gigaplus.makeshop.jp/kitanoace/01_osechi/assets/img/responsive/detail_bgImg1_re.png);
+                background-size: cover;
+                background-position: top center;    
+
+                .osechi_detail_bgImg {
+                    width: 100%;
+                    height: 92.5px;
+                    @include absolute;
+                    transform: translateY(-75%);
+                }      
+
+                .osechi_pc {
+                    display: block
+                }
+                
+                h2 {
+                    @include h2_pc;
+                    color: $white;
+                }
+
+                .osechi_ju {
+                    overflow-x: unset;
+                    padding-bottom: 100px;
+
+                    .osechi_ju_h3 {
+                        width: 90px;
+                        height: 200px;
+
+                        margin: 150px auto 0 auto;
+        
+                        h3 {
+                            padding: 40px 0 25px 0;
+                            @include font_ll_pc;
+                            letter-spacing: 16px;
+                        }
+                    }
+
+                    .osechi_ju_img {
+                        width: 400px;
+                        height: 400px;
+                        margin: 50px auto 0 auto;
+        
+                        .osechi_treat1 {
+                            width: 75vh;
+                            height: 75vh;
+                            transform: translate(-75vh, 100px);
+        
+                            .osechi_treat2_img {
+                                height: 65%;
+                                transform: translateY(15%);
+                            }
+                        }
+                    }        
+
+                    .osechi_ju_contents {
+                        width: 1000px;
+                        height: auto;
+                        padding: 100px 50px;
+                        z-index: 1;
+
+                        .detail_contents_bg_pc {
+                            height: 100%;
+                            display: block;
+                            object-fit: none;
+                        }
+
+                        h3 {
+                            @include font_ll_pc;
+                        }
+
+                        ul {
+                            width: calc(100% - 100px);
+                            margin: 0 auto;
+                            display: flex;
+                            justify-content: center;
+
+                            li {
+                                width: 30%;
+                                flex-direction: column;
+
+                                img {
+                                    width: 80%;
+                                    margin: 0 auto;
+                                }
+
+                                div {
+                                    width: 80%;
+                                    margin-left: 0;
+                                    margin: 0 auto;
+
+                                    h4 {
+                                        padding-top: 7.5px;
+                                        margin-top: 15px;
+                                        @include font_l_pc;
+                                    }
+
+                                    p {
+                                        margin-top: 25px;
+                                        font-size: 15px;
+                                        line-height: 20px;
+                                    }
+                                }
+                            }
+
+                            li:nth-of-type(2) {
+                                flex-direction: column-reverse;
+                                transform: translateY(-20px);
+                            }
+                        }
+                    }
+
+                    .osechi_ju_menu_h3 {
+                        @include font_ll_pc;
+                    }
+
+                    .osechi_ju_flex {
+                        width: 1000px;
+                        margin: 25px auto 0 auto;
+                        @include center;
+
+                        .osechi_ju_img {
+
+                            .osechi_ju_menu_treat1 {
+                                width: 65vh;
+                                height: 65vh;
+                                transform: translate(225%, -115%);
+                                z-index: 0;
+            
+                                .osechi_ju_menu_treat1_img {
+                                    width: auto;
+                                    height: 100%;
+                                }        
+                            }
+                        }   
+                        
+                        .osechi_flex_osechi1 {
+                            width: 200px;
+                            height: 200px;
+                            margin: 0 0 0 0;
+                        }
+                        
+                        .osechi_ju_menu_table {
+                            width: auto;
+                            border-top: solid 1px transparent;
+                            border-bottom: solid 1px transparent;
+                            padding: 0 0;
+                            margin: 0 0 0 25px;
+            
+                            table {
+                                border-top: solid 1px $white;
+                                border-bottom: solid 1px $white;  
+            
+                                tr {
+                
+                                    td {
+                                        padding: 3.5px 0;
+                                        color: $white;
+                                    }
+                                }
+
+                                tr:nth-of-type(1) {
+
+                                    td {
+                                        padding-top: 12.5px;
+                                    }
+                                }
+
+                                tr:nth-of-type(4) {
+
+                                    td {
+                                        padding-bottom: 12.5px;
+                                    }
+                                }
+                            }    
+                        }
+                    }
+                }
+
+                .osechi_ninoju {
+                    padding-top: 75px;
+                    // background: url(../img/responsive/detail_bgImg2_re.png);
+                    background: url(https://gigaplus.makeshop.jp/kitanoace/01_osechi/assets/img/responsive/detail_bgImg2_re.png);
+                    background-size: cover;
+                    background-position: top center;            
+
+                    .osechi_detail_bgImg {
+                        width: 100%;
+                        height: 110px;
+                        @include absolute;
+                        transform: translateY(-75%);
+                    }
+
+                    .osechi_ju_img {
+
+                        .osechi_treat3 {
+                            width: 65vh;
+                            height: 65vh;
+                            transform: translate(100%, 5%);
+        
+                            .osechi_treat4_img {
+                                transform: translateY(40%);
+                            }
+                        }
+                    }
+
+                    .osechi_ju_contents {
+
+                        ul {
+
+                            li:nth-of-type(2) {
+                                flex-direction: column-reverse;
+                                transform: translateY(-80px);
+                            }
+
+                            li:nth-of-type(3) {
+
+                                img {
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .osechi_ju_flex {
+
+                        .osechi_ju_img {
+
+                            .osechi_ju_menu_treat1 {
+                                transform: translate(-50%, -100%);
+                            }
+                        }
+                        
+                        .osechi_ju_menu_table {
+                            width: 60%;
+            
+                            table {
+                                width: 100%;
+                                border-top: solid 1px $black;
+                                border-bottom: solid 1px $black;  
+            
+                                tr {
+                
+                                    td {
+                                        padding: 3.5px 0;
+                                        color: $black;
+                                    }
+                                }
+
+                                tr:nth-of-type(4) {
+
+                                    td {
+                                        padding-bottom: 0;
+                                    }
+                                }
+
+                                tr:nth-of-type(9) {
+
+                                    td {
+                                        padding-bottom: 12.5px;
+                                    }
+                                }
+                            }    
+                        }
+                    }
+
+                    .osechi_cta {
+                        @include cta_pc;
+                        margin-top: 75px;
+                    }
+                }
+
+                .osechi_info {
+                    padding-top: 100px;
+                    
+                    .osechi_ribbon_icon {
+                        transform: translateY(-20px);
+                    }
+
+                    .osechi_info_flex {
+                        width: 900px;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: center;
+
+                        .osechi_info_deliver, .osechi_info_enjoy {
+                            width: calc(50% - 100px);
+
+                            h3 {
+                                @include font_l_pc;
+                            }
+
+                            .osechi_info_deliver_img {
+                                width: 100%;
+                                height: 300px;
+                                background-color: $grey;
+                                margin: 25px 0 12.5px 0;
+                            }
+
+                            p {
+                                @include font_l_pc;
+                                line-height: 24px;
+                            }
+
+                            ul {
+
+                                li {
+                                    margin-top: 15px;
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                }
+                            }
+                        }
+
+                        .osechi_info_enjoy {
+                            height: fit-content;
+                            margin-top: 0;
+                            margin-left: 50px;
+                        }
+                    }
+                }
+            }
+
+            .osechi_service {
+                padding: 100px 0 100px 0;
+
+                h2 {
+                    @include h2_pc;
+                    line-height: 40px;
+                    color: $white;
+
+                    .osechi_sp {
+                        display: block;
+                    }
+                }
+
+                article {
+                    width: 900px;
+
+                    h3 {
+                        @include font_ll_pc;
+
+                        span {
+                            margin: 0 auto 7.5px auto;
+                        }
+                    }
+                }
+            }
+
+            .osechi_qa {
+                background-image: none;
+                padding-bottom: 150px;
+
+                .osechi_pc {
+                    display: block
+                }
+
+                h2 {
+                    @include h2_pc;
+
+                    .osechi_sp {
+                        display: block;
+                    }
+                }
+
+                ul {
+                    width: 900px;
+                    padding: 25px 50px;
+
+                    li {
+                        padding: 25px 0;
+
+                        table {
+
+                            tr:nth-of-type(1) {
+
+                                td {
+                                    @include font_l_pc;
+                                }
+                            }
+
+                            tr:nth-of-type(2) {
+
+                                td {
+                                    padding-top: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .osechi_cta {
+                    @include cta_pc;
+                    margin-top: 75px;
+                }
+            }
+        }
+    }
+}
