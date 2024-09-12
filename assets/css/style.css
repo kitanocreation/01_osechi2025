@@ -634,7 +634,14 @@ body .osechi_fv_pc {
   z-index: -1;
 }
 .osechi_main .osechi_detail .osechi_ninoju .osechi_ju_contents {
+  height: 77vh;
   padding: 50px 25px 65px 25px;
+}
+.osechi_main .osechi_detail .osechi_ninoju .osechi_ju_contents .detail_contents_bg {
+  height: 112.5%;
+}
+.osechi_main .osechi_detail .osechi_ninoju .osechi_ju_contents img {
+  object-fit: initial;
 }
 .osechi_main .osechi_detail .osechi_ninoju .osechi_ju_contents ul li .osechi_ju_contents_li_img {
   height: 40%;

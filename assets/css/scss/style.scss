@@ -529,7 +529,16 @@ body {
             }
 
             .osechi_ju_contents {
+                height: 77vh;
                 padding: 50px 25px 65px 25px;
+
+                .detail_contents_bg {
+                    height: 112.5%;
+                }
+
+                img {
+                    object-fit: initial;
+                }
 
                 ul {
 
